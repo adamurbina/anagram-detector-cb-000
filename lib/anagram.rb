@@ -10,9 +10,7 @@ class Anagram
     def match(possible_array)
         anagrams = []
         possible_array.each { |word|
-            if word.split("").sort.join == @input
-                anagrams << word
-            end
+            anagrams << word if word.split("").sort.join == @input
         }
         anagrams
     end
